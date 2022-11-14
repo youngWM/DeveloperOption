@@ -19,7 +19,7 @@ import com.youngwm.developer.data.DeveloperOption
  * @author  youngwm
  * @date  2022/9/4 15:02
  **/
-class DeveloperOptionList : RecyclerView {
+open class DeveloperOptionList : RecyclerView {
 
     private val dataMap = mutableMapOf<String, DeveloperOption>()
     private val developerOptionAdapter by lazy { DeveloperOptionAdapter() }

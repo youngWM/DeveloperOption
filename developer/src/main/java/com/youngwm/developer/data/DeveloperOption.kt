@@ -4,7 +4,7 @@ package com.youngwm.developer.data
  * 说明：开发者选项。包含：
  * 1、标签（label）；
  * 2、键值对（OptionKV）列表；
- * 3、可选预设项（OptionValue）列表（对序号2的键值对的预设值）；
+ * 3、可选预设项（PresetValue）列表（对序号2的键值对的预设值）；
  * 4、保存按键；
  * 5、重置按键；
  *
@@ -40,7 +40,7 @@ package com.youngwm.developer.data
  *    host.addDefaultOption(kv1, kv2);
  *
  *    // 可选项1，开发环境对应的预设值
- *    OptionValue dev = new OptionValue("开发", false, false)
+ *    PresetValue dev = new PresetValue("开发", false, false)
  *    .addOptionKvs(
  *    kv1.copy("http://192.168.168.5:9091"),
  *    kv2.copy("1")
@@ -49,7 +49,7 @@ package com.youngwm.developer.data
  *    host.addOptionalValue(dev);
  *
  *    // 可选项2，正式环境对应的预设值
- *    OptionValue release = new OptionValue("生产", false, false)
+ *    PresetValue release = new PresetValue("生产", false, false)
  *    .addOptionKvs(
  *    kv1.copy("https://www.release.com"),
  *    kv2.copy("2")
@@ -78,7 +78,7 @@ package com.youngwm.developer.data
  * @param label 开发者选项的标签，作为开发者选项的唯一id
  * @date  2022/9/4 15:04
  **/
-class DeveloperOption(
+open class DeveloperOption(
     val label: String
     ) {
 

@@ -42,3 +42,5 @@ dependencies {
     // recyclerView 通用适配器
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.10'
 }
+
+apply from:'../nexus-publish.gradle'
